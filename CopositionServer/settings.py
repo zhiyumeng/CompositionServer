@@ -26,7 +26,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-STATIC_ROOT =os.path.join(BASE_DIR,'/static')
+STATIC_ROOT =os.path.join(BASE_DIR,'static')
+print(STATIC_ROOT)
 # Application definition
 
 INSTALLED_APPS = [
@@ -78,7 +79,7 @@ DATABASES = {
         'NAME': 'deecamp',
         'USER': 'fyyc',
         'PASSWORD': 'ws123',
-        'HOST': '127.0.0.1',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }

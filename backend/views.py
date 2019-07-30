@@ -12,4 +12,5 @@ def backend_view(request):
 
 def get_user_info(request, user_id):
     user = User.objects.filter(id=user_id)
-    return JsonResponse({'status': 0, 'user': serializers.serialize('json', user)})
+    user = user[0]
+    return JsonResponse({'status': 0, 'name':user.name,'user_id':user.id,'tel':user.tel_number})
